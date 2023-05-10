@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+  const data=[{
+    name:1
+},
+    {
+        name:2
+    }]
+
+ data.reduce(function (x,y){
+    console.log(y.name);
+ return   x+y.name
+},0)
+
+      let url = "name=1&agr=2&ad=1";
+      function f(url) {
+        const arr = url.split("&");
+        const obj = { };
+       
+        console.log(arr,1);
+        arr.forEach((ele) => {
+          const newArr = ele.split("=");
+          console.log(newArr,2);
+          obj[newArr[0]] = newArr[1];
+        
+        //   obj{
+        //     name:1,
+        //     agr:2,
+        //     ad:1
+        //   }
+        });
+        return obj;
+      }
+      
+      console.log(f(url));
+
+
+    //   首先封装一个函数     把URL 放进去
+            // 然后把url用字符串截取  获得数组
+        // 造一个空对象 一会放值
+        // 循环遍历这个数组
+    </script>
+  </body>
+</html>
